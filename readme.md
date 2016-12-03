@@ -13,7 +13,7 @@ Most prompts are cluttered, ugly and slow. I wanted something visually pleasing 
 
 - Comes with the perfect prompt character.
   Author went through the whole Unicode range to find it.
-- Shows `git` branch and whether it's dirty (with a `*`).
+- Shows `git` branch in red and whether it's dirty (with a `✗`).
 - Indicates when you have unpushed/unpulled `git` commits with up/down arrows. *(Check is done asynchronously!)*
 - Prompt character turns red if the last command didn't exit with `0`.
 - Command execution time will be displayed if it exceeds the set threshold.
@@ -25,14 +25,6 @@ Most prompts are cluttered, ugly and slow. I wanted something visually pleasing 
 ## Install
 
 Can be installed with `npm` or manually. Requires git 2.0.0+ and ZSH 5.0.0+.
-
-### npm
-
-```console
-$ npm install --global pure-prompt
-```
-
-That's it. Skip to [Getting started](#getting-started).
 
 ### Manually
 
@@ -125,7 +117,7 @@ prompt pure
 
 ## Tips
 
-In the screenshot you see Pure running in [Hyper](https://hyper.is) with the [hyper-snazzy](https://github.com/sindresorhus/hyper-snazzy) theme and Menlo font.
+In the screenshot you see Pure running in [Hyper](https://hyper.is) with the [material-design](https://github.com/MartinSeeler/iterm2-material-design) theme and Menlo font.
 
 The [Tomorrow Night Eighties](https://github.com/chriskempson/tomorrow-theme) theme with the [Droid Sans Mono](https://fonts.google.com/specimen/Droid+Sans+Mono) font (15pt) is also a [nice combination](https://github.com/sindresorhus/pure/blob/95ee3e7618c6e2162a1e3cdac2a88a20ac3beb27/screenshot.png).<br>
 *Just make sure you have anti-aliasing enabled in your terminal.*
