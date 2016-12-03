@@ -139,7 +139,9 @@ prompt_pure_preprompt_render() {
 	# construct preprompt, beginning with path
 	local preprompt="%F{blue}%~%f"
 	# git info
-	preprompt+="%F{$git_color}${vcs_info_msg_0_}${prompt_pure_git_dirty}%f"
+	#preprompt+="%F{$git_color}${vcs_info_msg_0_}${prompt_pure_git_dirty}%f"
+	preprompt+="%F{red}${vcs_info_msg_0_}${prompt_pure_git_dirty}%f"
+
 	# git pull/push arrows
 	preprompt+="%F{cyan}${prompt_pure_git_arrows}%f"
 	# username and machine if applicable
@@ -248,7 +250,8 @@ prompt_pure_async_git_dirty() {
 		test -z "$(command git status --porcelain --ignore-submodules -unormal)"
 	fi
 
-	(( $? )) && echo "*"
+	#(( $? )) && echo "*"
+	(( $? )) && echo "%F{yellow} ✗"
 }
 
 prompt_pure_async_git_fetch() {
